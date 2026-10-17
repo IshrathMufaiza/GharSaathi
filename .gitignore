@@ -1,0 +1,16 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+
+.env
+.env.*
+!.env.example
+
+client/dist/
+client/android/.gradle/
+client/android/.idea/
+client/android/local.properties/
+client/android/app/build/
+
+# Google OAuth credentials
+client_secret_*.json
