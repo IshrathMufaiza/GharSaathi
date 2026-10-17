@@ -28,7 +28,15 @@ const COOKIE_OPTIONS = {
 };
 
 app.use(helmet());
-app.use(cors({ origin: CLIENT_ORIGIN, credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost",
+    "https://localhost",
+    "http://localhost:5173",
+    "https://gharsaathi-api.onrender.com"
+  ],
+  credentials: true
+}));
 app.use(express.json({ limit: "12mb" }));
 app.use(cookieParser());
 
