@@ -1547,6 +1547,8 @@ async function start() {
       console.error("MongoDB connection failed:", error.message);
     }
   }
-  app.listen(PORT, () => console.log(`GharSaathi API listening on http://localhost:${PORT}`));
+  app.listen(PORT, "0.0.0.0", () => {
+  console.log(`GharSaathi API listening on port ${PORT}`);
+});
 }
 start();
